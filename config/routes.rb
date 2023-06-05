@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  get 'greetings/random' => 'greetings#random'
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  root 'root#index'
+  get '*path' => 'root#index'
 end
